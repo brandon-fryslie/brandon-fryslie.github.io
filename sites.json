@@ -49,6 +49,14 @@
       "repo_url": "https://github.com/brandon-fryslie/cc-nerf-buster"
     },
     {
+      "name": "browsergeist",
+      "description": "Undetectable browser automation for macOS via virtual HID drivers. Physics-based cursor motion, OpenCV vision targeting, Python SDK over a Swift Core Graphics daemon — no DOM-level surface for the page to detect.",
+      "language": "Python",
+      "pushed_at": "2025-08-01",
+      "pages_url": "https://brandon-fryslie.github.io/browsergeist/",
+      "repo_url": "https://github.com/brandon-fryslie/browsergeist"
+    },
+    {
       "name": "tinkerpad",
       "description": "Interactive playgrounds and Next.js tinkering. Multi-deploy parent — versioned experiments live at sub-paths under this URL.",
       "language": "HTML",
