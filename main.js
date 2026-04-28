@@ -46,13 +46,6 @@ function displayUrl(url) {
   return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 }
 
-function statusLabel(status) {
-  if (status === 'built') return { text: 'live', cls: 'live' };
-  if (status === 'building') return { text: 'building', cls: 'building' };
-  if (!status) return { text: 'unverified', cls: 'unknown' };
-  return { text: status, cls: 'unknown' };
-}
-
 function renderHeader(user) {
   if (user.avatar_url) {
     $('#avatar').src = user.avatar_url;
@@ -65,14 +58,13 @@ function renderHeader(user) {
 
 function renderStats(sites) {
   const total = sites.length;
-  const built = sites.filter(s => s.pages_status === 'built').length;
   const cutoff = new Date(Date.now() - 90 * 86400 * 1000).toISOString();
   const recent = sites.filter(s => s.pushed_at > cutoff).length;
 
   $('#stat-strip').innerHTML = `
     <span><strong>${total}</strong> deployed sites</span>
-    <span><strong>${built}</strong> verified live</span>
     <span><strong>${recent}</strong> updated <span style="opacity:0.6">in last 90d</span></span>
+    <span style="opacity:0.6">all deploys via <a href="https://github.com/brandon-fryslie/gh-pages-multiplexer" target="_blank" rel="noopener" style="color:var(--accent);">gh-pages-multiplexer</a></span>
   `;
 }
 
@@ -83,15 +75,12 @@ function renderSiteCard(s) {
     : '';
 
   const desc = s.description
-    ? escapeHtml(s.description.replace(/\s+— browse deploys at https?:\/\/\S+/g, '').trim())
+    ? escapeHtml(s.description)
     : '<em class="no-desc">(no description)</em>';
-
-  const status = statusLabel(s.pages_status);
 
   return `<article class="site-card">
     <header class="site-card-head">
       <h3 class="site-name">${escapeHtml(s.name)}</h3>
-      <span class="status-pill status-${status.cls}">${status.text}</span>
     </header>
 
     <p class="site-desc">${desc}</p>
@@ -122,22 +111,19 @@ async function init() {
     return;
   }
 
-  // Filter out this very site — it's the index, you're already here.
-  // ("you are here" loops are confusing in indexes.)
-  const sites = (data.sites || []).filter(s => s.name !== 'brandon-fryslie.github.io');
+  // sites.json is hand-curated; no need to filter the self-link out
+  // (the index doesn't list itself by convention).
+  const sites = data.sites || [];
 
   renderHeader(data.user || {});
   renderStats(sites);
 
   $('#sites-grid').innerHTML = sites.length
     ? sites.map(renderSiteCard).join('')
-    : '<p style="color:var(--text-dim);">No deployed sites found.</p>';
+    : '<p style="color:var(--text-dim);">No deployed sites listed yet.</p>';
 
   $('#result-count').textContent = `${sites.length} sites`;
-
-  if (data.generated_at) {
-    $('#generated-at').textContent = `index regenerated ${relTime(data.generated_at)}`;
-  }
+  $('#generated-at').textContent = 'hand-curated index';
 }
 
 init();

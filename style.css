@@ -150,31 +150,6 @@ a:hover { text-decoration: underline; }
   font-family: "SF Mono", "Menlo", monospace;
 }
 
-.status-pill {
-  font-size: 0.66rem;
-  padding: 2px 9px;
-  border-radius: 999px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-family: "SF Mono", "Menlo", monospace;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.status-live {
-  color: var(--status-live);
-  border: 1px solid var(--status-live);
-  background: rgba(63, 185, 80, 0.08);
-}
-.status-building {
-  color: var(--status-building);
-  border: 1px solid var(--status-building);
-  background: rgba(210, 153, 34, 0.08);
-}
-.status-unknown {
-  color: var(--status-unknown);
-  border: 1px solid var(--rule);
-}
-
 .site-desc {
   color: var(--text-dim);
   font-size: 0.88rem;
