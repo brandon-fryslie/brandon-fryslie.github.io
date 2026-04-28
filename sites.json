@@ -41,6 +41,14 @@
       "repo_url": "https://github.com/brandon-fryslie/cc-dump"
     },
     {
+      "name": "cc-nerf-buster",
+      "description": "Directly measuring the size of Claude Code's quota — what 100% actually is, in tokens, with bracketed precision. Local Go proxy plus capacity probe.",
+      "language": "Go",
+      "pushed_at": "2026-04-28",
+      "pages_url": "https://brandon-fryslie.github.io/cc-nerf-buster/",
+      "repo_url": "https://github.com/brandon-fryslie/cc-nerf-buster"
+    },
+    {
       "name": "tinkerpad",
       "description": "Interactive playgrounds and Next.js tinkering. Multi-deploy parent — versioned experiments live at sub-paths under this URL.",
       "language": "HTML",
