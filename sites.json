@@ -17,6 +17,14 @@
       "repo_url": "https://github.com/brandon-fryslie/brandon-fryslie"
     },
     {
+      "name": "gh-pages-showcase",
+      "description": "Drop-in static site template for any Pages-deployed repo. Copy four files, fill in a JSON, push — get a polished project page with zero build step. The page you're seeing is itself an instance of it.",
+      "language": "HTML · CSS · JS",
+      "pushed_at": "2026-04-28",
+      "pages_url": "https://brandon-fryslie.github.io/gh-pages-showcase/",
+      "repo_url": "https://github.com/brandon-fryslie/gh-pages-showcase"
+    },
+    {
       "name": "shader-playground",
       "description": "WebGPU shader experimentation environment. Hand-tracking foundation, Poisson-multigrid gravity scheme, two-hand pinch-to-scale gestures, XR panel.",
       "language": "TypeScript",
