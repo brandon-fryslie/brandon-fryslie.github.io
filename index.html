@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon Fryslie — projects</title>
+  <meta name="description" content="An index of Brandon Fryslie's GitHub projects. Filterable, sorted by recent activity.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%B0%EF%B8%8F%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <img id="avatar" class="avatar" src="" alt="">
+      <div class="header-text">
+        <h1 id="name">Brandon Fryslie</h1>
+        <p id="bio" class="bio"></p>
+        <nav class="links">
+          <a id="profile-link" href="" target="_blank" rel="noopener">github profile ↗</a>
+          <a href="https://brandon-fryslie.github.io/brandon-fryslie/" target="_blank" rel="noopener">brandon-fryslie.github.io/brandon-fryslie ↗</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="container">
+      <div class="stat-strip" id="stat-strip"></div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="filters">
+      <input type="search" id="search" placeholder="filter by name, description, or topic…" autocomplete="off" spellcheck="false">
+      <div class="lang-chips" id="lang-chips" role="toolbar" aria-label="filter by language"></div>
+    </div>
+
+    <div id="repos-grid" class="repos-grid"></div>
+
+    <p id="result-count" class="result-count"></p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>
+        Source: <a href="https://github.com/brandon-fryslie/brandon-fryslie.github.io" target="_blank" rel="noopener">brandon-fryslie/brandon-fryslie.github.io</a>
+        · <span id="generated-at"></span>
+      </small>
+    </div>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
