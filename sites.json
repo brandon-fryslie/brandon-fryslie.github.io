@@ -57,6 +57,14 @@
       "repo_url": "https://github.com/brandon-fryslie/browsergeist"
     },
     {
+      "name": "cathode",
+      "description": "Drop-in replacement for require('electron'): existing Electron apps run in any browser, with the renderer half on the same code path and the Node main process moved across a WebSocket. The showcase embeds a live mini-app whose renderer is real cathode source, so every protocol message that crosses the bridge is visible as you click.",
+      "language": "TypeScript",
+      "pushed_at": "2026-04-28",
+      "pages_url": "https://brandon-fryslie.github.io/cathode/",
+      "repo_url": "https://github.com/brandon-fryslie/cathode"
+    },
+    {
       "name": "tinkerpad",
       "description": "Interactive playgrounds and Next.js tinkering. Multi-deploy parent — versioned experiments live at sub-paths under this URL.",
       "language": "HTML",
