@@ -73,6 +73,14 @@
       "repo_url": "https://github.com/brandon-fryslie/electric-cherry"
     },
     {
+      "name": "ptydriver",
+      "description": "Drive interactive TUIs from Python through a real PTY. The showcase boots a Debian rootfs in your browser via CheerpX, preinstalls ptydriver, and runs the actual library against vim, fzf, and a Python REPL — same canonical Python code that runs on a host, no JavaScript reimplementation.",
+      "language": "Python",
+      "pushed_at": "2026-04-30",
+      "pages_url": "https://brandon-fryslie.github.io/ptydriver/",
+      "repo_url": "https://github.com/brandon-fryslie/ptydriver"
+    },
+    {
       "name": "tinkerpad",
       "description": "Interactive playgrounds and Next.js tinkering. Multi-deploy parent — versioned experiments live at sub-paths under this URL.",
       "language": "HTML",
